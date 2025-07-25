@@ -8,10 +8,10 @@ const Skills = () => {
       color: 'neon-green',
       skills: [
         { name: 'React', level: 95, icon: '⚛️' },
-        { name: 'Next.js', level: 90, icon: '🔺' },
+        { name: 'Vite.js', level: 90, icon: '💜' },
         { name: 'TypeScript', level: 88, icon: '📘' },
         { name: 'Tailwind CSS', level: 92, icon: '🎨' },
-        { name: 'Vue.js', level: 75, icon: '💚' },
+        { name: 'Librarys', level: 85, icon: '💚' },
         { name: 'JavaScript', level: 95, icon: '💛' },
       ]
     },
@@ -20,23 +20,21 @@ const Skills = () => {
       color: 'tech-red',
       skills: [
         { name: 'Node.js', level: 90, icon: '🟢' },
-        { name: 'Python', level: 82, icon: '🐍' },
         { name: 'Express.js', level: 88, icon: '🚀' },
-        { name: 'PostgreSQL', level: 85, icon: '🐘' },
+        { name: 'APIs', level: 85, icon: '🈸' },
+        { name: 'Supabase', level: 95, icon: '🌩️' },
         { name: 'MongoDB', level: 80, icon: '🍃' },
-        { name: 'Redis', level: 75, icon: '🔴' },
+        { name: 'Call GPT-4', level: 99, icon: '🟢⚫' },
       ]
     },
     {
       title: 'Dev Tools',
       color: 'gradient',
       skills: [
-        { name: 'Git', level: 92, icon: '📚' },
-        { name: 'Docker', level: 80, icon: '🐳' },
-        { name: 'AWS', level: 75, icon: '☁️' },
-        { name: 'Figma', level: 85, icon: '🎨' },
         { name: 'VS Code', level: 95, icon: '💻' },
-        { name: 'Linux', level: 78, icon: '🐧' },
+        { name: 'GitHub', level: 93, icon: '🐈‍⬛' },
+        { name: 'Git', level: 75, icon: '📚' },
+        { name: 'Figma', level: 50, icon: '🎨' },
       ]
     }
   ];
@@ -56,93 +54,91 @@ const Skills = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <div className="pt-20 px-4">
-      <div className="container max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-            My <span className="gradient-text">Skills</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life and create 
-            amazing digital experiences.
-          </p>
-        </div>
+        <div className="container max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+              My <span className="gradient-text">Skills</span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Technologies and tools I use to bring ideas to life and create
+              amazing digital experiences.
+            </p>
+          </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <div 
-              key={category.title}
-              className="animate-scale-in"
-              style={{ animationDelay: `${categoryIndex * 0.2}s` }}
-            >
-              <div className={`p-8 rounded-lg bg-card border transition-all duration-300 ${getColorClasses(category.color)}`}>
-                <h3 className="text-2xl font-bold mb-8 text-center">
-                  {category.title}
-                </h3>
-                
-                <div className="space-y-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div 
-                      key={skill.name}
-                      className="animate-fade-in"
-                      style={{ animationDelay: `${(categoryIndex * 0.2) + (skillIndex * 0.1)}s` }}
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-3">
-                          <span className="text-xl">{skill.icon}</span>
-                          <span className="font-medium">{skill.name}</span>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {skillCategories.map((category, categoryIndex) => (
+              <div
+                key={category.title}
+                className="animate-scale-in"
+                style={{ animationDelay: `${categoryIndex * 0.2}s` }}
+              >
+                <div className={`p-8 rounded-lg bg-card border transition-all duration-300 ${getColorClasses(category.color)}`}>
+                  <h3 className="text-2xl font-bold mb-8 text-center">
+                    {category.title}
+                  </h3>
+
+                  <div className="space-y-6">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div
+                        key={skill.name}
+                        className="animate-fade-in"
+                        style={{ animationDelay: `${(categoryIndex * 0.2) + (skillIndex * 0.1)}s` }}
+                      >
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-3">
+                            <span className="text-xl">{skill.icon}</span>
+                            <span className="font-medium">{skill.name}</span>
+                          </div>
+                          <Badge variant="secondary" className="text-xs">
+                            {skill.level}%
+                          </Badge>
                         </div>
-                        <Badge variant="secondary" className="text-xs">
-                          {skill.level}%
-                        </Badge>
+
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div
+                            className={`h-2 rounded-full transition-all duration-1000 ${category.color === 'neon-green'
+                                ? 'bg-primary'
+                                : category.color === 'tech-red'
+                                  ? 'bg-secondary'
+                                  : 'bg-gradient-to-r from-primary to-secondary'
+                              }`}
+                            style={{
+                              width: `${skill.level}%`,
+                              animationDelay: `${(categoryIndex * 0.3) + (skillIndex * 0.1)}s`
+                            }}
+                          />
+                        </div>
                       </div>
-                      
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <div 
-                          className={`h-2 rounded-full transition-all duration-1000 ${
-                            category.color === 'neon-green' 
-                              ? 'bg-primary' 
-                              : category.color === 'tech-red'
-                              ? 'bg-secondary'
-                              : 'bg-gradient-to-r from-primary to-secondary'
-                          }`}
-                          style={{ 
-                            width: `${skill.level}%`,
-                            animationDelay: `${(categoryIndex * 0.3) + (skillIndex * 0.1)}s`
-                          }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional Skills */}
-        <div className="mt-16 text-center animate-fade-in">
-          <h3 className="text-2xl font-bold mb-8">
-            Other <span className="gradient-text">Technologies</span>
-          </h3>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              'GraphQL', 'Socket.io', 'Jest', 'Cypress', 'Webpack', 'Vite', 
-              'Prisma', 'Supabase', 'Vercel', 'Netlify', 'Firebase', 'Stripe'
-            ].map((tech, index) => (
-              <Badge 
-                key={tech}
-                variant="outline"
-                className="text-sm py-2 px-4 neon-border animate-scale-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                {tech}
-              </Badge>
             ))}
+          </div>
+
+          {/* Additional Skills */}
+          <div className="text-center animate-fade-in flex items-center justify-center gap-3 mt-2">
+            <h3 className="text-2xl font-bold">
+              Complementary <span className="gradient-text">Technologies:</span>
+            </h3>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                'Supabase', 'Vercel', 'Netlify', 'GitHub'
+              ].map((tech, index) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="text-sm py-2 px-4 neon-border animate-scale-in"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-    </div>
     </div>
   );
 };

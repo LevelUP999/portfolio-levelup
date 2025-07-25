@@ -75,9 +75,9 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+              <Link className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 w-full" to={"/contact"}>
                 Hire Me
-              </Button>
+              </Link>
             </div>
           </div>
         )}

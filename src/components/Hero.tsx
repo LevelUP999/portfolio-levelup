@@ -1,13 +1,14 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/profile-image.jpg';
+import profileImage from '@/assets/image.png';
+import { Navigate } from 'react-router-dom';
 
 const Hero = () => {
   const stats = [
-    { label: 'Years Experience', value: '5+' },
-    { label: 'Projects Completed', value: '50+' },
-    { label: 'Technologies', value: '20+' },
-    { label: 'Happy Clients', value: '30+' },
+    { label: 'Classification', value: 'Full-Stack' },
+    { label: 'Projects Completed', value: '+3' },
+    { label: 'Technologies', value: '+9' },
+    { label: 'Quality of Projects', value: '999%' },
   ];
 
   return (
@@ -18,8 +19,8 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-lg">
-                <span>Hello</span>
-                <span className="animate-float">👋</span>
+                <span className='text-3xl'>Hello</span>
+                <span className="animate-float text-6xl">👋</span>
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
@@ -86,10 +87,10 @@ const Hero = () => {
                 <span className="text-2xl">⚛️</span>
               </div>
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-card rounded-full flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-xl">🚀</span>
+                <span className="text-xl">JS</span>
               </div>
               <div className="absolute top-1/2 -left-8 w-12 h-12 bg-card rounded-full flex items-center justify-center animate-float" style={{ animationDelay: '2s' }}>
-                <span className="text-lg">💻</span>
+                <span className="text-lg">APIs</span>
               </div>
             </div>
           </div>
