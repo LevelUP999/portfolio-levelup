@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import { Badge } from '@/components/ui/badge';
+import { Code2Icon } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -57,11 +58,10 @@ const Skills = () => {
         <div className="container max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              My <span className="gradient-text">Skills</span>
+              Minhas <span className="gradient-text">Habilidades</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Technologies and tools I use to bring ideas to life and create
-              amazing digital experiences.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto flex gap-3 justify-center">
+              Veja todas as tecnologias que utilizo para codar! <Code2Icon className='text-primary animate-leftRight'></Code2Icon>
             </p>
           </div>
 

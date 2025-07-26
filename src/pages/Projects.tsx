@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
-  const [selectedFilter, setSelectedFilter] = useState('All');
+  const [selectedFilter, setSelectedFilter] = useState('Todos');
 
   const projects = [
     {
@@ -13,8 +13,28 @@ const Projects = () => {
       description: 'Full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      category: 'Full Stack',
+      category: '',
       liveUrl: '#',
+      githubUrl: '#',
+      featured: true
+    },
+    {
+      title: 'Quanttun AI',
+      description: 'O site foi desenvolvido para solucionar o problema dos estudantes, em conseguir um ensino de qualidade e fácil acesso.',
+      image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
+      technologies: ['Integração com ChatGPT', 'Ligação com banco de dados', 'REACT', 'JavaScript', 'TailwindCSS'],
+      category: 'Full Stack',
+      liveUrl: 'https://quanttunai.netlify.app',
+      githubUrl: '#',
+      featured: true
+    },
+    {
+      title: 'Página de apresentação de perfume',
+      description: 'A página foi criada para apresentar um produto, utilizando técnicas de desing para chamar a atenção dos clientes.',
+      image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
+      technologies: ['REACT', 'Bibliotecas', 'TailwindCSS', 'Desing Impactante'], 
+      category: 'Frontend', 
+      liveUrl: 'https://landingpage-fragance.netlify.app',
       githubUrl: '#',
       featured: true
     },
@@ -32,42 +52,24 @@ const Projects = () => {
       description: 'Interactive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
       image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=center',
       technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Chart.js'],
-      category: 'Frontend',
+      category: '',
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: 'AI Chat Interface',
+      title: 'AI Chat',
       description: 'Modern AI-powered chat interface with real-time messaging, file sharing, and smart conversation management.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=center',
       technologies: ['React', 'WebSocket', 'OpenAI API', 'Firebase'],
-      category: 'Full Stack',
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'Mobile Banking App',
-      description: 'Secure mobile banking application with biometric authentication, transaction history, and financial analytics.',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&crop=center',
-      technologies: ['React Native', 'Node.js', 'PostgreSQL', 'JWT'],
-      category: 'Mobile',
-      liveUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'API Gateway Service',
-      description: 'Microservices API gateway with rate limiting, authentication, and monitoring capabilities.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=center',
-      technologies: ['Node.js', 'Express', 'Redis', 'Docker', 'AWS'],
       category: 'Backend',
       liveUrl: '#',
       githubUrl: '#'
     }
   ];
 
-  const filters = ['All', 'Frontend', 'Backend', 'Full Stack', 'Mobile'];
+  const filters = ['Todos', 'Frontend', 'Backend', 'Full Stack'];
 
-  const filteredProjects = selectedFilter === 'All' 
+  const filteredProjects = selectedFilter === 'Todos' 
     ? projects 
     : projects.filter(project => project.category === selectedFilter);
 
@@ -78,11 +80,10 @@ const Projects = () => {
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-            My <span className="gradient-text">Projects</span>
+            Meus <span className="gradient-text">Projetos</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects that demonstrate my skills in web development, 
-            from frontend interfaces to full-stack applications.
+            Você está na coleção de todos os projetos já feitos já feitos por mim.
           </p>
         </div>
 
@@ -94,8 +95,8 @@ const Projects = () => {
               onClick={() => setSelectedFilter(filter)}
               variant={selectedFilter === filter ? "default" : "outline"}
               className={selectedFilter === filter 
-                ? "tech-glow bg-primary text-primary-foreground" 
-                : "neon-border hover:border-primary hover:text-primary"
+                ? "tech-glow bg-primary text-primary-foreground font-bold" 
+                : "neon-border hover:border-primary hover:text-[#1a1a1a] text-[#00ff8c] font-bold"
               }
             >
               {filter}
@@ -104,7 +105,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.title}
@@ -114,17 +115,6 @@ const Projects = () => {
               <ProjectCard {...project} />
             </div>
           ))}
-        </div>
-
-        {/* Load More Button */}
-        <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="neon-border"
-          >
-            Load More Projects
-          </Button>
         </div>
       </div>
       </div>

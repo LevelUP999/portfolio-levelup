@@ -8,11 +8,11 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Início', path: '/' },
+    { name: 'Projetos', path: '/projects' },
+    { name: 'Habilidades', path: '/skills' },
+    { name: 'Sobre mim', path: '/about' },
+    { name: 'Contato', path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -32,9 +32,8 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className={`text-sm font-medium transition-colors hover:gradient-text transition ${isActive(item.path) ? 'text-primary' : 'text-muted-foreground'
+                  }`}
               >
                 {item.name}
               </Link>
@@ -43,9 +42,9 @@ const Navigation = () => {
 
           {/* Hire Me Button */}
           <div className="hidden md:block">
-            <Button className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90">
-              Hire Me
-            </Button>
+            <Link className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 p-2 rounded border-2 border-[#00ff8c] hover:bg-transparent hover:text-[#00ff8c]" to={"/contact"} >
+              Contacte-me
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,16 +66,15 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.path) ? 'text-primary' : 'text-muted-foreground'
-                  }`}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.path) ? 'text-primary' : 'text-muted-foreground'
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <Link className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 w-full" to={"/contact"}>
-                Hire Me
+                Contacte-me
               </Link>
             </div>
           </div>

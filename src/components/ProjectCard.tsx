@@ -1,6 +1,7 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useToast } from '@/hooks/use-toast';
 
 interface ProjectCardProps {
   title: string;
@@ -12,6 +13,7 @@ interface ProjectCardProps {
   featured?: boolean;
 }
 
+
 const ProjectCard = ({ 
   title, 
   description, 
@@ -21,6 +23,7 @@ const ProjectCard = ({
   githubUrl, 
   featured = false 
 }: ProjectCardProps) => {
+  const { toast } = useToast();
   return (
     <div className={`group relative overflow-hidden rounded-lg bg-card border border-border card-hover ${
       featured ? 'lg:col-span-2' : ''
@@ -37,13 +40,13 @@ const ProjectCard = ({
         {/* Overlay Buttons */}
         <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {liveUrl && (
-            <Button size="sm" className="tech-glow bg-primary text-primary-foreground">
+            <Button size="sm" className="tech-glow bg-primary text-primary-foreground" onClick={() => {window.open(liveUrl, "_blank")}}>
               <ExternalLink size={16} className="mr-2" />
-              Live Demo
+              Ir para
             </Button>
           )}
           {githubUrl && (
-            <Button size="sm" variant="outline" className="neon-border">
+            <Button size="sm" variant="outline" className="neon-border" onClick={() => {toast({title: "⚠ Código Indisponível!", description: "Não é permitido visualizar o código dos projetos."})}}>
               <Github size={16} className="mr-2" />
               Code
             </Button>
@@ -84,13 +87,13 @@ const ProjectCard = ({
         {/* Action Buttons */}
         <div className="flex gap-3">
           {liveUrl && (
-            <Button size="sm" variant="ghost" className="hover:text-primary">
+            <Button size="sm" variant="ghost" className="text-primary hover:text-[#1a1a1a]" onClick={() => {window.open(liveUrl, "_blank")}}>
               <ExternalLink size={16} className="mr-2" />
               View Project
             </Button>
           )}
           {githubUrl && (
-            <Button size="sm" variant="ghost" className="hover:text-primary">
+            <Button size="sm" variant="ghost" className="text-primary hover:text-[#1a1a1a]" onClick={() => {toast({title: "⚠ Código Indisponível!", description: "Não é permitido visualizar o código dos projetos."})}}>
               <Github size={16} className="mr-2" />
               GitHub
             </Button>

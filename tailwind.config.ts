@@ -139,6 +139,17 @@ export default {
 						transform: 'scale(1)',
 						opacity: '1'
 					}
+				},
+				'left-Right': {
+					'0%, 50%, 100%': {
+						rotate: '0'
+					},
+					'25%': {
+						rotate: '30deg'
+					},
+					'75%': {
+						rotate: '-30deg'
+					}
 				}
 			},
 			animation: {
@@ -148,7 +159,8 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite',
 				'slide-in-right': 'slide-in-right 0.8s ease-out',
-				'scale-in': 'scale-in 0.5s ease-out'
+				'scale-in': 'scale-in 0.5s ease-out',
+				'leftRight': 'left-Right infinite 3s ease-in-out'
 			}
 		}
 	},

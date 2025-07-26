@@ -1,73 +1,79 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/image.png';
+import profileImage from '@/assets/image-profi.jpeg';
 import { Navigate } from 'react-router-dom';
+import ImgReact from '@/assets/reactimg.png'
+import ImgApi from '@/assets/apiimg.png'
+import ImgJs from '@/assets/jsimg.png'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
+
   const stats = [
-    { label: 'Classification', value: 'Full-Stack' },
-    { label: 'Projects Completed', value: '+3' },
-    { label: 'Technologies', value: '+9' },
-    { label: 'Quality of Projects', value: '999%' },
+    { label: 'Classificação', value: 'Full Stack' },
+    { label: 'Projetos Completados', value: '+3' },
+    { label: 'Tecnologias utilizadas', value: '+9' },
+    { label: 'Qualidades dos Projetos', value: '999%' },
   ];
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4">
       <div className="container max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mt-6">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-lg">
-                <span className='text-3xl'>Hello</span>
+                <span className='text-3xl'>Olá</span>
                 <span className="animate-float text-6xl">👋</span>
               </div>
-              
+
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                I'm a{' '}
+                Eu sou{' '}
                 <span className="gradient-text">
-                  Web Developer
+                  Programador WEB
                 </span>
               </h1>
-              
+
               <p className="text-xl text-muted-foreground max-w-lg">
-                I build amazing digital experiences with modern technologies and clean code.
+                Eu crio experiências digitais <strong className="gradient-text">modernas</strong> e visualmente <strong className="gradient-text">impactantes</strong>!
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                Hire Me
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Link className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 p-2 px-6 rounded-xl border-2 border-[#00ff8c] hover:bg-transparent hover:text-[#00ff8c]" to={"/contact"} >
+                Contacte-me
+              </Link>
+              <Button
+                size="lg"
+                variant="outline"
                 className="neon-border"
               >
-                View Projects
+                <Link to={"/projects"}>Veja meus projetos</Link>
               </Button>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-6">
-              {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Mail, href: '#', label: 'Email' },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="p-3 rounded-lg border border-border hover:border-primary transition-colors tech-glow"
-                  aria-label={label}
-                >
-                  <Icon size={24} />
-                </a>
-              ))}
+            <div className="flex flex-col gap-3">
+              <span className='text-muted-foreground'>Minhas redes:</span>
+              <div className='flex gap-3'>
+                {[
+                  { icon: Github, href: 'https://github.com/LevelUP999', label: 'GitHub' },
+                  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+                  { icon: Mail, href: 'mailto:levelup.twitch.tv@gmail.com', label: 'Email' },
+                ].map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className="p-3 rounded-lg border border-border hover:border-primary transition-colors tech-glow"
+                    aria-label={label}
+                    target='_blank'
+                  >
+                    <Icon size={24} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -81,16 +87,16 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Floating Tech Icons */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-card rounded-full flex items-center justify-center animate-float tech-glow">
-                <span className="text-2xl">⚛️</span>
+                <span className="text-2xl"> <img src={ImgReact} className='w-[90%] m-auto animate-leftRight' /> </span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-card rounded-full flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-xl">JS</span>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-card rounded-full flex items-center justify-center animate-float tech-glow" style={{ animationDelay: '1s' }}>
+                <span className="text-xl"> <img src={ImgJs} className='w-[90%] m-auto animate-leftRight' /> </span>
               </div>
-              <div className="absolute top-1/2 -left-8 w-12 h-12 bg-card rounded-full flex items-center justify-center animate-float" style={{ animationDelay: '2s' }}>
-                <span className="text-lg">APIs</span>
+              <div className="absolute top-1/2 -left-8 w-12 h-12 bg-card rounded-full flex items-center justify-center animate-float tech-glow" style={{ animationDelay: '2s' }}>
+                <span className="text-lg"> <img src={ImgApi} className='w-[90%] m-auto animate-leftRight' /> </span>
               </div>
             </div>
           </div>
@@ -100,8 +106,8 @@ const Hero = () => {
         <div className="mt-20 animate-scale-in">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div 
-                key={stat.label} 
+              <div
+                key={stat.label}
                 className="text-center p-6 rounded-lg bg-card border border-border card-hover"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >

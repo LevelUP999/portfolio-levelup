@@ -1,44 +1,42 @@
 import { Calendar, MapPin, Code, Coffee } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import { Badge } from '@/components/ui/badge';
-import profileImage from '@/assets/image.png';
+import profileImage from '@/assets/image-profi.jpeg';
 
 const About = () => {
   const timeline = [
     {
       year: '2024/7',
-      title: 'Full Stack Developer',
-      company: 'Actual Stage',
-      description: 'Leading development of cutting-edge web applications using modern technologies.',
+      title: 'Desenvolvedor Full Stack',
+      company: 'Criação de projetos complexos',
+      description: 'Criação de estruturas mais complexas, e com funcionalidades exigentes de novas tecnologias.',
       current: true
     },
     {
       year: '2024/5',
-      title: 'Intensive Treinning',
-      company: 'Create more projects for treinning abilitys',
-      description: 'Developed and maintained multiple client projects using React, Node.js, and cloud services.'
+      title: 'Treinamento na área',
+      company: 'Criação dediversos projetos e aprimoramento das abilidades',
+      description: 'Uso de tecnologias modernas, para melhor qualidade nos resultados.'
     },
     {
       year: '2024/2',
-      title: 'Frontend Developer',
-      company: 'Fist Stage',
-      description: 'Specialized in creating responsive and interactive user interfaces.'
+      title: 'Desenvolvendor Frontend',
+      company: 'Primeiro passo',
+      description: 'Aprimoramento das capacidades de desing e criação de interfaces.'
     },
     {
       year: '2024/1',
-      title: 'Started Web Development Journey',
-      company: 'Search about',
-      description: 'Began learning programming and fell in love with creating digital experiences.'
+      title: 'Começo da minha jornada na WEB',
+      company: 'Pesquisando sobre à área',
+      description: 'Início da minha jornada na área de programação web.'
     }
   ];
 
   const interests = [
-    { icon: '🆕', label: 'Use new Technologies' },
-    { icon: '🎮', label: 'Game Development' },
-    { icon: '🎵', label: 'Music Production' },
-    { icon: '📚', label: 'Tech Books' },
-    { icon: '🏃‍♂️', label: 'Running' },
-    { icon: '☕', label: 'Coffee Brewing' },
+    { icon: '🆕', label: 'Gosto de usar novas tecnologias' },
+    { icon: '🎮', label: 'Gosto de desenvolvimento de jogos' },
+    { icon: '💻🔻', label: 'Sou aluno do SenacTec' },
+    { icon: '🏅', label: 'Já fui 1º Colocado no meu curso de Progamção WEB' },
   ];
 
   return (
@@ -48,16 +46,16 @@ const About = () => {
         <div className="container max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              About <span className="gradient-text">Me</span>
+              Sobre <span className="gradient-text">Mim</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Get to know the person behind the code and the journey that shaped my passion for web development.
+              Conheça mais sobre minha história e como trabalho.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Column - Image and Quick Facts */}
-            <div className="space-y-8 animate-scale-in mb-6">
+            <div className="space-y-8 animate-scale-in mb-6" style={{ position: "sticky", top: "30px" }}>
               <div className="relative">
                 <div className="w-full max-w-md mx-auto">
                   <img
@@ -70,20 +68,20 @@ const About = () => {
                 {/* Floating Stats */}
                 <div className="absolute -top-4 -right-4 bg-card border border-primary/20 rounded-lg p-4 tech-glow">
                   <div className="flex items-center gap-2">
-                    <Code className="text-primary" size={20} />
+                    <Code className="text-primary animate-leftRight" size={20} />
                     <div>
-                      <div className="text-lg font-bold">999%</div>
-                      <div className="text-xs text-muted-foreground">Quality Service</div>
+                      <div className="text-lg font-bold text-primary">999%</div>
+                      <div className="text-xs text-muted-foreground">Qualidades dos Projetos</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="absolute -bottom-4 -left-4 bg-card border border-secondary/20 rounded-lg p-4 tech-glow-red">
                   <div className="flex items-center gap-2">
-                    <Coffee className="text-secondary" size={20} />
+                    <Coffee className="text-secondary animate-leftRight" size={20} />
                     <div>
-                      <div className="text-lg font-bold">9+</div>
-                      <div className="text-xs text-muted-foreground">technologies</div>
+                      <div className="text-lg font-bold text-secondary">9+</div>
+                      <div className="text-xs text-muted-foreground">Tecnologias utilizadas</div>
                     </div>
                   </div>
                 </div>
@@ -93,29 +91,18 @@ const About = () => {
             {/* Right Column - Story and Timeline */}
             <div className="animate-fade-in">
               <div>
-                <h2 className="text-3xl font-bold mb-6">My Story</h2>
-                <div className="prose prose-invert max-w-none space-y-4 text-muted-foreground">
-                  <p>
-                    Hi there! I'm a passionate web developer with over 5 years of experience
-                    creating digital experiences that make a difference. My journey started with
-                    curiosity and a desire to understand how the web works.
-                  </p>
-                  <p>
-                    What began as simple HTML pages has evolved into a deep expertise in modern
-                    web technologies. I specialize in React, Node.js, and cloud technologies,
-                    but I'm always excited to learn new tools and frameworks.
-                  </p>
-                  <p>
-                    I believe in writing clean, maintainable code and creating user experiences
-                    that are both beautiful and functional. When I'm not coding, you can find me
-                    exploring new technologies, contributing to open source, or brewing the perfect cup of coffee.
-                  </p>
+                <h2 className="text-3xl font-bold mb-6">Minha História</h2>
+                <div className="prose prose-invert max-w-none space-y-4 text-muted-foreground mb-6">
+                  <p>Nada Ainda</p>
+                  <p>Nada Ainda</p>
+                  <p>Nada Ainda</p>
+                  <p>Nada Ainda</p>
                 </div>
               </div>
 
               {/* Timeline */}
               <div>
-                <h3 className="text-2xl font-bold mb-8">Professional Journey</h3>
+                <h3 className="text-2xl font-bold mb-8">Minha Jornada</h3>
                 <div className="space-y-6">
                   {timeline.map((item, index) => (
                     <div
@@ -138,7 +125,7 @@ const About = () => {
                           </Badge>
                           {item.current && (
                             <Badge className="text-xs bg-primary/10 text-primary border-primary/20">
-                              Current
+                              Atual
                             </Badge>
                           )}
                         </div>
@@ -153,10 +140,10 @@ const About = () => {
 
             </div>
           </div>
-          <div className="flex w-full justify-around mb-6">
+          <div className="flex w-full justify-around my-9">
             {/* Interests */}
-            <div className="bg-card border border-border rounded-lg mr-[200px] p-6">
-              <h3 className="text-xl font-semibold mb-4">Interests & Hobbies</h3>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Fatos Interessantes</h3>
               <div className="grid grid-cols-2 gap-4">
                 {interests.map((interest, index) => (
                   <div
@@ -168,25 +155,6 @@ const About = () => {
                     <span className="text-sm">{interest.label}</span>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Quick Facts */}
-            <div className="bg-card border border-border w-[30%] rounded-lg p-6 space-y-4">
-              <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <MapPin className="text-primary" size={18} />
-                  <span>Uberlândia, Brazil</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Calendar className="text-primary" size={18} />
-                  <span>Fast Evolution</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Coffee className="text-primary" size={18} />
-                  <span>Love for inteligence</span>
-                </div>
               </div>
             </div>
           </div>
