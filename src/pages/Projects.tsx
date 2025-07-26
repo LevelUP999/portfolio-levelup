@@ -9,16 +9,6 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      category: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: true
-    },
-    {
       title: 'Quanttun AI',
       description: 'O site foi desenvolvido para solucionar o problema dos estudantes, em conseguir um ensino de qualidade e fácil acesso.',
       image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
@@ -38,12 +28,20 @@ const Projects = () => {
       githubUrl: '#',
       featured: true
     },
+    //{
+    //  title: 'Task Management App',
+    //  description: 'Modern task management application with real-time collaboration, drag-and-drop functionality, and team workspaces.',
+    //  image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=center',
+    //  technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
+    //  category: 'Frontend',
+    //  liveUrl: '#',
+    //  githubUrl: '#'
+    //},
     {
-      title: 'Task Management App',
-      description: 'Modern task management application with real-time collaboration, drag-and-drop functionality, and team workspaces.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=center',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-      category: 'Frontend',
+      title: 'Chat com IA ( Inteligência Artifial )',
+      description: 'A página foi criada com o intuito de explorar a inteligencia do ChatGPt e como integra-la em outras aplicações.',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=center',
+      technologies: ['React', 'TailwindCSS', 'OpenAI API', 'Integração com ChatGPT', 'JavaScript', 'Bibliotecas de Componentes'],
       liveUrl: '#',
       githubUrl: '#'
     },
@@ -57,13 +55,14 @@ const Projects = () => {
       githubUrl: '#'
     },
     {
-      title: 'AI Chat',
-      description: 'Modern AI-powered chat interface with real-time messaging, file sharing, and smart conversation management.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=center',
-      technologies: ['React', 'WebSocket', 'OpenAI API', 'Firebase'],
-      category: 'Backend',
+      title: 'E-Commerce Platform',
+      description: 'Full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+      category: '',
       liveUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      featured: true
     }
   ];
 

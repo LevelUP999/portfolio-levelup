@@ -35,8 +35,8 @@ const About = () => {
   const interests = [
     { icon: '🆕', label: 'Gosto de usar novas tecnologias' },
     { icon: '🎮', label: 'Gosto de desenvolvimento de jogos' },
-    { icon: '💻🔻', label: 'Sou aluno do SenacTec' },
-    { icon: '🏅', label: 'Já fui 1º Colocado no meu curso de Progamção WEB' },
+    { icon: '🌟', label: 'Facinado por detalhes' },
+    { icon: '🏅', label: '1º Colocado em Progamção WEB | SenacTEC' },
   ];
 
   return (
@@ -90,18 +90,21 @@ const About = () => {
 
             {/* Right Column - Story and Timeline */}
             <div className="animate-fade-in">
-              <div>
+              <div className='border-b-[1px] mb-3'>
                 <h2 className="text-3xl font-bold mb-6">Minha História</h2>
                 <div className="prose prose-invert max-w-none space-y-4 text-muted-foreground mb-6">
-                  <p>Nada Ainda</p>
-                  <p>Nada Ainda</p>
-                  <p>Nada Ainda</p>
-                  <p>Nada Ainda</p>
+                  <p>Sou um desenvolvedor web facinado por criar soluções completas e de impacto. Ao longo da minha trajetória, tive a oportunidade de trabalhar com tecnologias como <strong>React</strong>, <strong>TailwindCSS</strong> e <strong>TypeScript</strong>, sempre buscando <strong>otimizar a experiência do usuário</strong>. Como aluno do <strong className='gradient-text'>SenacTEC</strong>, aprendi a importância de combinar <strong>habilidades técnicas</strong> com a <strong>criatividade</strong>, criando projetos que não apenas funcionam, mas também <strong className="gradient-text">surpreendem</strong>.</p>
+
+                  <p>Um dos marcos até agora foi o projeto <strong className="gradient-text">Quanttun AI</strong>, que me rendeu a medalha de <strong className="gradient-text">1º lugar no SenacTEC</strong>. Esse projeto foi um grande desafio, pois envolveu o desenvolvimento de uma aplicação nível <strong>full-stack</strong>, combinando a criação de <strong className="gradient-text">interfaces modernas</strong> e responsivas com a <strong className="gradient-text">integração do ChatGPT</strong> para tornar o sistema mais interativo.</p>
+
+                  <p>Entrei na área de <strong>WEB</strong> por acidente, mas logo fui me aprofundando na área, começando por <strong className="gradient-text">curiosidade</strong>, aprimorando minhas <strong className="gradient-text">habilidades</strong>, passando pelo <strong className="gradient-text">SenacTEC</strong>, até chegar ao nível que estou hoje.</p>
+
+                  <p>Também gosto de experimentar com novas <strong className="gradient-text">tecnologias</strong> e <strong>bibliotecas</strong>. Meu objetivo é <strong>construir soluções completas</strong>, desde o visual até o funcional, garantindo que tudo esteja perfeitamente integrado e otimizado. Estou <strong className="gradient-text">sempre em busca de novos desafios</strong> para continuar aprendendo e <strong>aprimorando minhas habilidades</strong>!</p>
                 </div>
               </div>
 
               {/* Timeline */}
-              <div>
+              <div className='border-b-[1px]'>
                 <h3 className="text-2xl font-bold mb-8">Minha Jornada</h3>
                 <div className="space-y-6">
                   {timeline.map((item, index) => (
