@@ -2,6 +2,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
+import { useLang } from '@/contexts/langContext';
 
 interface ProjectCardProps {
   title: string;
@@ -14,20 +15,21 @@ interface ProjectCardProps {
 }
 
 
-const ProjectCard = ({ 
-  title, 
-  description, 
-  image, 
-  technologies, 
-  liveUrl, 
-  githubUrl, 
-  featured = false 
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  technologies,
+  liveUrl,
+  githubUrl,
+  featured = false
 }: ProjectCardProps) => {
+
+  const { lang } = useLang();
   const { toast } = useToast();
   return (
-    <div className={`group relative overflow-hidden rounded-lg bg-card border border-border card-hover ${
-      featured ? 'lg:col-span-2' : ''
-    }`}>
+    <div className={`group relative overflow-hidden rounded-lg bg-card border border-border card-hover ${featured ? 'lg:col-span-2' : ''
+      }`}>
       {/* Project Image */}
       <div className="relative overflow-hidden">
         <img
@@ -36,19 +38,19 @@ const ProjectCard = ({
           className="w-full h-48 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         {/* Overlay Buttons */}
         <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {liveUrl && (
-            <Button size="sm" className="tech-glow bg-primary text-primary-foreground" onClick={() => {window.open(liveUrl, "_blank")}}>
+            <Button size="sm" className="tech-glow bg-primary text-primary-foreground" onClick={() => { window.open(liveUrl, "_blank") }}>
               <ExternalLink size={16} className="mr-2" />
-              Ir para
+              {lang == "pt-br" ? 'Ir para' : 'Go To'}
             </Button>
           )}
           {githubUrl && (
-            <Button size="sm" variant="outline" className="neon-border" onClick={() => {toast({title: "⚠ Código Indisponível!", description: "Não é permitido visualizar o código dos projetos."})}}>
+            <Button size="sm" variant="outline" className="neon-border" onClick={() => { lang == "pt-br" ? toast({ title: "⚠ Código Indisponível!", description: "Não é permitido visualizar o código dos projetos." }) : toast({ title: "⚠ Code Unavailable!", description: "Viewing project code is not allowed." }) }}>
               <Github size={16} className="mr-2" />
-              Code
+              {lang == "pt-br" ? "Código" : "Code"}
             </Button>
           )}
         </div>
@@ -66,7 +68,7 @@ const ProjectCard = ({
             </Badge>
           )}
         </div>
-        
+
         <p className="text-muted-foreground mb-4 line-clamp-3">
           {description}
         </p>
@@ -74,8 +76,8 @@ const ProjectCard = ({
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech) => (
-            <Badge 
-              key={tech} 
+            <Badge
+              key={tech}
               variant="secondary"
               className="text-xs bg-muted/50 hover:bg-primary/10 hover:text-primary transition-colors"
             >
@@ -87,13 +89,13 @@ const ProjectCard = ({
         {/* Action Buttons */}
         <div className="flex gap-3">
           {liveUrl && (
-            <Button size="sm" variant="ghost" className="text-primary hover:text-[#1a1a1a]" onClick={() => {window.open(liveUrl, "_blank")}}>
+            <Button size="sm" variant="ghost" className="text-primary hover:text-[#1a1a1a]" onClick={() => { window.open(liveUrl, "_blank") }}>
               <ExternalLink size={16} className="mr-2" />
               View Project
             </Button>
           )}
           {githubUrl && (
-            <Button size="sm" variant="ghost" className="text-primary hover:text-[#1a1a1a]" onClick={() => {toast({title: "⚠ Código Indisponível!", description: "Não é permitido visualizar o código dos projetos."})}}>
+            <Button size="sm" variant="ghost" className="text-primary hover:text-[#1a1a1a]" onClick={() => { toast({ title: "⚠ Código Indisponível!", description: "Não é permitido visualizar o código dos projetos." }) }}>
               <Github size={16} className="mr-2" />
               GitHub
             </Button>
