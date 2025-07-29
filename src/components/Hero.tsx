@@ -53,13 +53,13 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 p-2 px-6 rounded-xl border-2 border-[#00ff8c] hover:bg-transparent hover:text-[#00ff8c]" to={"/contact"} >
+                <Link className="tech-glow bg-primary text-primary-foreground hover:bg-primary/90 p-2 card-hover px-6 rounded-xl border-2 border-[#00ff8c] hover:bg-transparent hover:text-[#00ff8c]" to={"/contact"} >
                   Contacte-me
                 </Link>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="neon-border"
+                  className="neon-border card-hover text-primary font-bold transition"
                 >
                   <Link to={"/projects"}>Veja meus projetos</Link>
                 </Button>
@@ -95,7 +95,7 @@ const Hero = () => {
                   <img
                     src={profileImage}
                     alt="Developer Profile"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-110 transition"
                   />
                 </div>
 

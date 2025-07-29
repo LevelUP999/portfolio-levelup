@@ -12,9 +12,9 @@ const Projects = () => {
     {
       title: 'Quanttun AI',
       description: 'O site foi desenvolvido para solucionar o problema dos estudantes, em conseguir um ensino de qualidade e fácil acesso.',
-      image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
-      technologies: ['Integração com ChatGPT', 'Ligação com banco de dados', 'REACT', 'JavaScript', 'TailwindCSS'],
+      image: './projects-img/quanttun_img.png',
       category: 'Full Stack',
+      technologies: ['Integração com ChatGPT', 'Ligação com banco de dados', 'REACT', 'JavaScript', 'TailwindCSS'],
       liveUrl: 'https://quanttunai.netlify.app',
       githubUrl: '#',
       featured: true
@@ -22,20 +22,20 @@ const Projects = () => {
     {
       title: 'Página de apresentação de perfume',
       description: 'A página foi criada para apresentar um produto, utilizando técnicas de desing para chamar a atenção dos clientes.',
-      image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
-      technologies: ['REACT', 'Bibliotecas', 'TailwindCSS', 'Desing Impactante'],
+      image: './projects-img/necnotr_img.png',
       category: 'Frontend',
+      technologies: ['REACT', 'Bibliotecas', 'TailwindCSS', 'Desing Impactante'],
       liveUrl: 'https://landingpage-fragance.netlify.app',
       githubUrl: '#',
       featured: true
     },
     {
-      title: 'Chat com IA ( Inteligência Artifical )',
-      description: 'A página foi criada com o intuito de explorar a inteligencia do ChatGPt e como integra-la em outras aplicações.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=center',
-      technologies: ['React', 'TailwindCSS', 'OpenAI API', 'Integração com ChatGPT'],
-      category: 'Backend',
-      liveUrl: '#',
+      title: 'AxinMind',
+      description: 'A página foi criada para uma clínica de Acess Bar, contendo sistema de agendamento, que bloqueia seções no mesmo intervalo.',
+      image: './projects-img/axinmind_img.png',
+      category: 'Full Stack',
+      technologies: ['React', 'TailwindCSS', 'Ligação com Banco de Dados', 'nada ainda :3'],
+      liveUrl: 'https://axinmind.netlify.app',
       githubUrl: '#'
     },
     {
@@ -63,9 +63,9 @@ const Projects = () => {
     {
       title: 'Quanttun AI',
       description: 'The website was developed to solve students problems of obtaining quality education with easy access.',
-      image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
-      technologies: ['Integration with ChatGPT', 'Database connection', 'REACT', 'JavaScript', 'TailwindCSS'],
+      image: './projects-img/quanttun_img.png',
       category: 'Full Stack',
+      technologies: ['Integration with ChatGPT', 'Database connection', 'REACT', 'JavaScript', 'TailwindCSS'],
       liveUrl: 'https://quanttunai.netlify.app',
       githubUrl: '#',
       featured: true
@@ -73,20 +73,20 @@ const Projects = () => {
     {
       title: 'Fragance presentation page',
       description: 'The page was created to present a product, using design techniques to attract customers attention.',
-      image: 'https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg',
-      technologies: ['REACT', 'Librarys', 'TailwindCSS', 'Impactful Desing'],
+      image: './projects-img/necnotr_img.png',
       category: 'Frontend',
+      technologies: ['REACT', 'Librarys', 'TailwindCSS', 'Impactful Desing'],
       liveUrl: 'https://landingpage-fragance.netlify.app',
       githubUrl: '#',
       featured: true
     },
     {
-      title: 'Chat with AI (Artificial Intelligence)',
-      description: 'This page was created with the aim of exploring ChatGPT intelligence and how to integrate it into other applications.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=center',
-      technologies: ['React', 'TailwindCSS', 'OpenAI API', 'Integration with ChatGPT'],
-      category: 'Backend',
-      liveUrl: '#',
+      title: 'AxinMind',
+      description: 'The page was created for an Access Bar clinic, containing a scheduling system, which blocks sessions at the same interval.',
+      image: './projects-img/axinmind_img.png',
+      category: 'Full Stack',
+      technologies: ['React', 'TailwindCSS', 'Ligação com Banco de Dados', 'nada ainda :3'],
+      liveUrl: 'https://axinmind.netlify.app',
       githubUrl: '#'
     },
     {

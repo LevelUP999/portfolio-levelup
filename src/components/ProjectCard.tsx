@@ -28,7 +28,7 @@ const ProjectCard = ({
   const { lang } = useLang();
   const { toast } = useToast();
   return (
-    <div className={`group relative overflow-hidden rounded-lg bg-card border border-border card-hover ${featured ? 'lg:col-span-2' : ''
+    <div className={`group relative overflow-hidden rounded-lg bg-card border border-border card-hover min-h-[595px] ${featured ? 'lg:col-span-2' : ''
       }`}>
       {/* Project Image */}
       <div className="relative overflow-hidden">
